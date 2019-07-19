@@ -11,9 +11,9 @@ describe('anagram') do
     expect('CaLl'.casing()).to(eq('call'))
   end
   #
-  # it('check if inputted strings are actually words') do
-  #   expect("bzhn".word?()).to(eq(false))
-  # end
+  it('check if inputted strings are actually words') do
+    expect("bzhn".word_check()).to(eq(false))
+  end
   #
   # it('check if two words are antigrams') do
   #   expect("hi, bye".antigram?()).to(eq(true))

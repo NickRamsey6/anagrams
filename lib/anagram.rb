@@ -8,7 +8,7 @@ class String
   # end
   def casing
       input_word = self.downcase()
-      p input_word
+      # p input_word
   end
 
   def anagram(i)
@@ -19,8 +19,8 @@ class String
 
     w1 = self.split(//).sort()
     w2 = i.split(//).sort()
-    p w1
-    p w2
+    # p w1
+    # p w2
 
     if w1 == w2
       true
@@ -34,9 +34,15 @@ class String
     # end
   end
 
-  # def word?()
-  #
-  # end
+  def word_check()
+    vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+    w1 = self.split(//)
+    p w1
+    if vowels & w1 != 0
+      true
+    end
+    false
+  end
 end
 
 # p 'Enter first word'
