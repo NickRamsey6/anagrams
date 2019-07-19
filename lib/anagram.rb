@@ -46,6 +46,16 @@ class String
     end
     false
   end
+
+  def antigram(i)
+    w1 = self.split(//).sort()
+    w2 = i.split(//).sort()
+    antigram_array = w1 & w1
+    if antigram_array.length() == 0
+      false
+    end
+    true
+  end
 end
 
 # p 'Enter first word'
