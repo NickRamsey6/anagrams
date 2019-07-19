@@ -12,7 +12,7 @@ describe('anagram') do
   end
   #
   it('check if inputted strings are actually words') do
-    expect("bzhn".word_check()).to(eq(false))
+    expect("dog".word_check()).to(eq(true))
   end
   #
   # it('check if two words are antigrams') do

@@ -37,11 +37,13 @@ class String
   def word_check()
     vowels = ['a', 'e', 'i', 'o', 'u', 'y']
     w1 = self.split(//)
-    p w1
-    if vowels & w1 != 0
+    common_letter_array = vowels & w1
+    p common_letter_array.length()
+    # p w1
+    if common_letter_array.length() != 0
+      # p vowels & w1
       true
     end
-    false
   end
 end
 
