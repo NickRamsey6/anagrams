@@ -44,6 +44,7 @@ class String
       # p vowels & w1
       true
     end
+    false
   end
 end
 
