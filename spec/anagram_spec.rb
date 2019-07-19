@@ -3,13 +3,13 @@ require 'anagram.rb'
 
 describe('anagram') do
   it('check if two words are anagrams') do
-    i = 'all'
-    expect('call'.anagram(i)).to(eq(true))
+    i = 'call'
+    expect('ball'.anagram(i)).to(eq(true))
   end
 
-  it('standardize casing for words entered') do
-    expect('CaLl'.casing()).to(eq('call'))
-  end
+  # it('standardize casing for words entered') do
+  #   expect('CaLl'.casing()).to(eq('call'))
+  # end
 
   # it('check if inputted strings are actually words') do
   #   expect("bzhn".word?()).to(eq(false))
