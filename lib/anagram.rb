@@ -17,8 +17,8 @@ class String
     # gram = self.concat(i).match('(.)\1')[0]
     # p gram
 
-    w1 = self.split(//).sort()
-    w2 = i.split(//).sort()
+    w1 = self.tr("-!,\"\':;=+<>?_[]{}*#$%()&^.@ ", "").split(//).sort()
+    w2 = i.tr("-!,\"\':;=+<>?_[]{}*#$%()&^.@ ", "").split(//).sort()
     # p w1
     # p w2
 

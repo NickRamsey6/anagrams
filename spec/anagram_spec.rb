@@ -20,7 +20,8 @@ describe('anagram') do
     expect('sauasage'.antigram(i)).to(eq(true))
   end
 
-  # it('check if multiple words entered are anagrams') do
-  #   expect("go hang a salami, hog".anagram?()).to(eq(true))
-  # end
+  it('check if multiple words entered are anagrams') do
+    i = 'im a lasanga hog'
+    expect("go hang a salami".anagram(i)).to(eq(true))
+  end
 end
