@@ -3,60 +3,64 @@ require 'fileutils'
 
 
 class String
-  # def initialize()
-  #
-  # end
+  attr_accessor(:word1, :word2)
+  def initialize(word1, word2)
+  @word1 = word1
+  @word2 = word2
+  end
   def casing
-      input_word = self.downcase()
+      @word1 = @word1.downcase()
       # p input_word
   end
 
-  def anagram(i)
-    # p self
-    # p self.concat(i)
-    # gram = self.concat(i).match('(.)\1')[0]
-    # p gram
-
-    w1 = self.tr("-!,\"\':;=+<>?_[]{}*#$%()&^.@ ", "").split(//).sort()
-    w2 = i.tr("-!,\"\':;=+<>?_[]{}*#$%()&^.@ ", "").split(//).sort()
-    # p w1
-    # p w2
-
-    if w1 == w2
+  def anagram
+  #   # p self
+  #   # p self.concat(i)
+  #   # gram = self.concat(i).match('(.)\1')[0]
+  #   # p gram
+  #
+    @word1 = @word1.tr("-!,\"\':;=+<>?_[]{}*#$%()&^.@ ", "").split(//).sort()
+    @word2 = @word2.tr("-!,\"\':;=+<>?_[]{}*#$%()&^.@ ", "").split(//).sort()
+  #   # p w1
+  #   # p w2
+  #
+    if @word1 == @word2
       true
     end
-    # if gram = i
-    #   p i
-    #   # p gram.chars.sort.join()
-    #   # p i.chars.sort.join()
-    # # if gram.chars.sort.join = i.chars.sort.join
-    #   true
-    # end
+  #   # if gram = i
+  #   #   p i
+  #   #   # p gram.chars.sort.join()
+  #   #   # p i.chars.sort.join()
+  #   # # if gram.chars.sort.join = i.chars.sort.join
+  #   #   true
+  #   # end
   end
 
-  def word_check()
+  def word_check
     vowels = ['a', 'e', 'i', 'o', 'u', 'y']
-    w1 = self.split(//)
-    common_letter_array = vowels & w1
-    p common_letter_array.length()
-    # p w1
+    @word1 = @word1.split(//)
+    common_letter_array = vowels & @word1
+  #   p common_letter_array.length()
+  #   # p w1
     if common_letter_array.length() != 0
-      # p vowels & w1
+  #     # p vowels & w1
       true
     end
     false
   end
 
-  def antigram(i)
-    w1 = self.split(//).sort()
-    w2 = i.split(//).sort()
-    antigram_array = w1 & w1
+  def antigram
+    @word1 = @word1.split(//).sort()
+    @word2 = @word2.split(//).sort()
+    antigram_array = @word1 & @word1
     if antigram_array.length() == 0
       false
     end
     true
   end
 end
+
+
 
 # p 'Enter first word'
 # input = gets.chomp
