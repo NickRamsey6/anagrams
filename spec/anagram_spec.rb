@@ -1,36 +1,36 @@
 require 'pry'
 require 'anagram.rb'
 
-string = String.new('', '')
-# string.word1 = 'listen'
-# string.word2 = 'silent'
+anagram = Anagram.new('', '')
+# anagram.word1 = 'listen'
+# anagram.word2 = 'silent'
 
 describe('anagram') do
   it('check if two words are anagrams') do
-    string.word1 = 'listen'
-    string.word2 = 'silent'
-    expect(string.anagram).to(eq(true))
+    anagram.word1 = 'listen'
+    anagram.word2 = 'silent'
+    expect(anagram.anagram).to(eq(true))
   end
 
   it('standardize casing for words entered') do
-    string.word1 = 'CaLl'
-    expect(string.casing).to(eq('call'))
+    anagram.word1 = 'CaLl'
+    expect(anagram.casing).to(eq('call'))
   end
 
-  it('check if inputted strings are actually words') do
-    string.word1 = 'dxzvmn'
-    expect(string.word_check).to(eq(false))
+  it('check if inputted string is actually words') do
+    anagram.word1 = 'dxzvmn'
+    expect(anagram.word_check).to(eq(false))
   end
 
   it('check if two words are antigrams') do
-    string.word1 = 'dong'
-    string.word2 = 'sausage'
-    expect(string.antigram).to(eq(true))
+    anagram.word1 = 'dong'
+    anagram.word2 = 'sausage'
+    expect(anagram.antigram).to(eq(true))
   end
 
   it('check if multiple words entered are anagrams') do
-    string.word1 = 'im a lasanga hog'
-    string.word2 = 'go hang a salami'
-    expect(string.anagram).to(eq(true))
+    anagram.word1 = 'im a lasanga hog'
+    anagram.word2 = 'go hang a salami'
+    expect(anagram.anagram).to(eq(true))
   end
 end

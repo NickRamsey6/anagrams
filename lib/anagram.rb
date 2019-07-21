@@ -2,7 +2,7 @@ require 'pry'
 require 'fileutils'
 
 
-class String
+class Anagram < String
   attr_accessor(:word1, :word2)
   def initialize(word1, word2)
   @word1 = word1
