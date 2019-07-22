@@ -7,8 +7,8 @@ anagram = Anagram.new('', '')
 
 describe('anagram') do
   it('check if two words are anagrams') do
-    anagram.word1 = 'tar'
-    anagram.word2 = 'rat'
+    anagram.word1 = 'nomar'
+    anagram.word2 = 'ramon'
     expect(anagram.anagram_check).to(eq('These words are anagrams'))
   end
 
