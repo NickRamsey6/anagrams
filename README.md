@@ -17,7 +17,7 @@ _For my first Ruby code review, I created an application that will take in user 
 
 
 
-## Specs (Initial, May Change)
+## Specs
 
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
