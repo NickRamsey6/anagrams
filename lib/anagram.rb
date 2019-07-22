@@ -8,19 +8,15 @@ class Anagram < String
   @word1 = word1
   @word2 = word2
   end
-  def casing
-      @word1 = @word1.downcase()
-      # p input_word
-  end
 
-  def anagram
+  def anagram_check
   #   # p self
   #   # p self.concat(i)
   #   # gram = self.concat(i).match('(.)\1')[0]
   #   # p gram
   #
-    @word1 = @word1.tr("-!,\"\':;=+<>?_[]{}*#$%()&^.@ ", "").split(//).sort()
-    @word2 = @word2.tr("-!,\"\':;=+<>?_[]{}*#$%()&^.@ ", "").split(//).sort()
+    @word1 = @word1.tr("-!,\"\':;=+<>?_[]{}*#$%()&^.@ ", "").downcase().split(//).sort()
+    @word2 = @word2.tr("-!,\"\':;=+<>?_[]{}*#$%()&^.@ ", "").downcase().split(//).sort()
   #   # p w1
   #   # p w2
   #
@@ -49,7 +45,7 @@ class Anagram < String
     false
   end
 
-  def antigram
+  def antigram_check
     @word1 = @word1.split(//).sort()
     @word2 = @word2.split(//).sort()
     antigram_array = @word1 & @word1

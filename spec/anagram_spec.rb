@@ -9,12 +9,13 @@ describe('anagram') do
   it('check if two words are anagrams') do
     anagram.word1 = 'listen'
     anagram.word2 = 'silent'
-    expect(anagram.anagram).to(eq(true))
+    expect(anagram.anagram_check).to(eq(true))
   end
 
   it('standardize casing for words entered') do
     anagram.word1 = 'CaLl'
-    expect(anagram.casing).to(eq('call'))
+    anagram.word2 = "allc"
+    expect(anagram.anagram_check).to(eq(true))
   end
 
   it('check if inputted string is actually words') do
@@ -25,12 +26,12 @@ describe('anagram') do
   it('check if two words are antigrams') do
     anagram.word1 = 'dong'
     anagram.word2 = 'sausage'
-    expect(anagram.antigram).to(eq(true))
+    expect(anagram.antigram_check).to(eq(true))
   end
 
   it('check if multiple words entered are anagrams') do
     anagram.word1 = 'im a lasanga hog'
     anagram.word2 = 'go hang a salami'
-    expect(anagram.anagram).to(eq(true))
+    expect(anagram.anagram_check).to(eq(true))
   end
 end
